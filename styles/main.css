@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@300;500;600&display=swap");
+
+:root {
+  --primary-color: #1f1f1f;
+  --accent-color: #fe1a0a;
+  --secondary-color: #e9e9e9;
+}
+html,
+body {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.hero h1 {
+  color: var(--secondary-color);
+}
+.hero p {
+  color: var(--secondary-color);
+}
+
+.hero button {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 1em 2em;
+  color: var(--secondary-color);
+}
+.hero a {
+  text-decoration: none;
+  display: grid;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 2.625rem;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+}
+
+h4 {
+  font-size: 0.75rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+}
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 15vh;
+}
+
+ul.menu li a.active  {
+  transition: .3s ease-in-out;
+color: var(--accent-color);
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+img.cart:hover {
+  transform: scale(0.9);
+  transition: .3s ease-in-out;
+}
+
+ul.menu li a:hover{
+  text-decoration: underline;
+  transition: .3s ease-in-out;
+color: var(--accent-color);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  text-decoration: none;
+}
+.menu li {
+  margin-right: 30px;
+}
+
+.menu li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  height: 70vh;
+  background-image: url(../images/hero.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Product Section*/
+.products {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.products h2 {
+  color: var(--secondary-color);
+}
+.clothing,
+.equipment,
+.accessories {
+  background-color: antiquewhite;
+  height: 300px;
+  padding: 20px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clothing {
+  background: url(../images/clothing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.equipment {
+  background: url(../images/equipment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accessories {
+  background: url(../images/accessories.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button.cta {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 1em 2em;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Offer Section*/
+.offer {
+  width: 100%;
+  height: 18.75em;
+  background: url(../images/offer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.offer h1 {
+  margin: 0px;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.offer p {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+p.code {
+  font-weight: 600;
+  color: var(--accent-color);
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+}
+
+/* About Us Section*/
+.about {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  margin: 2.5em 0em;
+  padding: 2.5em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.info h2 {
+  text-align: center;
+}
+/* Sub Footer Section*/
+.sub-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 2.5em 0em;
+}
+
+div.copy {
+  background-color: var(--primary-color);
+  height: 15vh;
+}
+.about-center {
+  text-align: center;
+  color: var(--primary-color);
+}
+p.text-center {
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 1.25em 0em;
+  margin: 0px;
+  border-top: 1px dotted var(--secondary-color);
+}
+/* Products*/
+.product-parent {
+  display: flex;
+  justify-content: center;
+}
+.all-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #fff;
+}
+.product-child {
+  flex: 1fr 1fr 1fr;
+  margin: 0.625em;
+}
+/*product-image*/
