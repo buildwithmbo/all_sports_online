@@ -3,14 +3,10 @@ $current_page = 'index';
 include('inc/header.php');
 ?>
 <!--success or error message-->
-<div >
-<?php 
 //create a session variable to Display Message
-  $_SESSION['add'] = "SUCCESS! Please Check Your Email";
+ // $_SESSION['add'] = "SUCCESS! Please Check Your Email";
  //redirect page to home
- header("location:".SITEURL.'index.php');
- ?>
- </div>
+ //header("location:".SITEURL.'index.php');
     <!--Begin Hero Section-->
       <section class="hero">
           <div class="center">
