@@ -1,3 +1,4 @@
+
 <?php
 include('inc/header.php');
 ?>
@@ -20,13 +21,12 @@ include('inc/header.php');
 <?php
 include('inc/footer.php');
 ?>
-
-<?php 
+ <?php 
 //Proccess input data and save it to data base 
 //Also check if the submit button is clicked or not 
-if(isset($POST['submit']))
+if(isset($_POST['submit']))
 {
-  //buutton clicked
+ //button clicked
   //get data from form
   $full_name = $_POST['full_name'];
   $email_address = $_POST['email_address'];
@@ -38,9 +38,28 @@ if(isset($POST['submit']))
   email_address='$email_address',
   password='$password' 
   ";
-// execute query and save data in database
-$conn = mysqli_connect('localhost', 'root', '') or die(mysqli_error()); //database connection 
-$db_select = mysqli_select_db($conn, 'all_sports_online') or die(mysqli_error()); // select database  
-//res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+// Execute query and save data in database
+$res = mysqli_query($conn, $sql) or die(mysqli_error()); 
+//check whether the data (query) is inserted or not and display appropriate message
+if($res==TRUE)
+{
+  //data inserted
+  //create a session variable to Display Message
+  $_SESSION['add'] = "SUCCESS! Please Check Your Email";
+ //redirect page to home
+ header("location:".SITEURL.'index.php');
+}
+else 
+{
+  //data not inserted
+  //create a session variable to Display Message
+  $_SESSION['add'] = "ERRO! Please Check Your Details";
+ //redirect page to add admin
+ header("location:".SITEURL.'add-admin.php');
+}
+
 }
 ?>
+
+

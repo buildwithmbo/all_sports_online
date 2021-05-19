@@ -7,9 +7,9 @@ include('inc/header.php');
       <div class="form">
         <!--Begin Login Form Section-->
         <form class="login-form">
-          <input type="text" placeholder="username" />
-          <input type="password" placeholder="password" />
-          <button>login</button>
+        <input type="text" name="email_address" placeholder="email address" />
+          <input type="password" name="password" placeholder="password" />
+          <input type="submit" name="submit" value="login" class="button"/>
           <p class="message">
             Not registered? <a href="signup.php">Create an account</a>
           </p>
